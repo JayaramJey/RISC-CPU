@@ -46,7 +46,7 @@ always @(*) begin
             MemWrite      = 1; // enable memory write
             ALU_Selection = 4'b0000; // ALU adds base + offset
         end
-        6'b000100: begin  // beq ? branch if equal
+        6'b000100: begin   //branch if equal
             ALUSrc        = 0; // second ALU input comes from register
             ALU_Selection = 4'b0001; // ALU subtracts to compare
             PC_Select     = 2'b01;   // select branch address
@@ -58,4 +58,5 @@ always @(*) begin
 end
 
 endmodule
+
 
