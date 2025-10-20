@@ -16,7 +16,7 @@ module register_file (
     initial begin
         for (i = 0; i < 32; i = i + 1)
             regs[i] = 32'd0;
-        // set a couple of non-zero regs so ALU outputs are visible (optional)
+        // set a couple of non-zero regs to use for waveforms
         regs[1] = 32'd10;   // x1 = 10
     	regs[2] = 32'd4;    // x2 = 4
     	regs[5] = 32'd7;    // x5 = 7
