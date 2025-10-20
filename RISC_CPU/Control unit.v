@@ -6,7 +6,7 @@ module control_unit(
     output reg MemRead,           // enables reading from data memory (ldw instructions)
     output reg MemWrite,          // enables writing to data memory (write instructions
     output reg [3:0] ALU_Selection, // selects the operation for the ALU
-    output reg [1:0] PC_Select,     // selects how PC updates: increment, branch, jump, hold
+    output reg [1:0] PC_Select     // selects how PC updates: increment, branch, jump, hold
 );
 
 always @(*) begin
