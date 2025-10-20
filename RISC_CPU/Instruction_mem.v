@@ -6,14 +6,13 @@ module instr_mem(
     reg [31:0] memory [0:255];
 
     initial begin
-        // Example program (replace with your instructions)
+       
         memory[0] = 32'h00221820; // add rd, rt, rs
-        memory[1] = 32'h8C220000; // ldw  rd, 0(rs)
-        memory[2] = 32'hAC230000; // stw  rd, 0(rs)
-        memory[3] = 32'h10620004; // beq rs, rt, 4(memory location 0x0004)
+        memory[1] = 32'h00222022; // sub x4, x1, x2
+        memory[2] = 32'h00221818; // mul x3, x1, x2
     end
 
-    // Word-aligned addressing: ignore lowest 2 bits
+    //address is given in byte addressing so change it to words and ignore the other bits since memory is smaller
     assign instr = memory[addr[9:2]];
 endmodule
 
